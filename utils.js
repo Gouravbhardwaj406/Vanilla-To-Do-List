@@ -78,7 +78,6 @@ const projectDiv = function (project, parentDiv) {
     completeButton("BUTTON", "complete", "completed", exitdiv, project, parentDiv, divtag);
   }
   exitButton("BUTTON", "exitt", "Remove", exitdiv, project, parentDiv, divtag);
-  clearInputs("#projectname", "#technology", "#starting-date", "#completion-date");
 }
 
 const displayProjects = function (filter) {
