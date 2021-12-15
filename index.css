@@ -221,35 +221,30 @@ h1 {
 .container {
   display: flex;
   flex-wrap: wrap;
+    margin:0px;
+    background-color: white;
   
-  margin: 20px;
-  height: 320px;
   width: 900px;
   overflow: scroll;
 }
-.myprojectdetails {
-  display: inline-block;
 
-  border: 1px solid black;
-  text-align: center;
-  font-size: 25px;
-  vertical-align: middle;
-}
-.project-details {
-  display: inline-block;
+
+
+
+.header {
+  
+  padding-left: 20px;
   font-size: 56px;
-  width: 100%;
-  text-align: center;
-  margin: 0px;
-  font-weight: bolder;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: 700;
+  
 }
+.header-sub{
+  padding-bottom: 20px;
+  padding-left: 20px;
+  width:900px;
+  border-bottom: 2px solid black;
 
-.abc {
-  text-align: center;
 }
-
 .heading {
   display: flex;
   flex-wrap: wrap;
@@ -258,35 +253,16 @@ h1 {
   background-color: black;
   color: white;
 }
-
 .heading1 {
-  margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
-  width: 1290px;
-}
-.projectdiv {
-  width: 100%;
-  height: 70px;
-  background-color: bisque;
+ margin-top: 10px;
+  width: 900px;
+ 
 }
 
-.project1 {
-  width: 280px;
-}
-.tech {
-  width: 280px;
-}
 
-.start-date {
-  width: 250px;
-}
-.end-date {
-  width: 250px;
-}
-.exitt {
-  background-color: red;
-}
+
 
 .box1,
 .box2 {
@@ -347,14 +323,12 @@ h1 {
   font-size: 16px;
   vertical-align: middle;
 }
-.container{
-  margin:0px;
-  background-color: white;
-}
+
 .exitt {
   height: 30px;
   line-height: 30px;
   font-weight: bold;
+  background-color: red;
 }
 .complete {
   height: 30px;
