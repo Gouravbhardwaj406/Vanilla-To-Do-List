@@ -221,11 +221,10 @@ h1 {
 .container {
   display: flex;
   flex-wrap: wrap;
-  float: left;
+  
   margin: 20px;
-  width: 900px;
-  border: 1px solid black;
   height: 320px;
+  width: 900px;
   overflow: scroll;
 }
 .myprojectdetails {
