@@ -27,10 +27,10 @@ homeButton.addEventListener("click",function()
   
 })
 
-let addProjects=document.querySelector(".addproject");
-addProjects.addEventListener("click",function()
+let addProjectdiv=document.querySelector(".addproject");
+addProjectdiv.addEventListener("click",function()
 {
-  addProjects.style.background="green";
+  addProjectdiv.style.background="green";
   document.querySelector(".addprojectdiv").style.height="500px";
   document.querySelector(".home").style.background="#2B1451";
   document.querySelector(".project-list").style.height="0px";
@@ -59,14 +59,18 @@ addButton.addEventListener("click",function()
     startingDate: startDate,
     completionDate: completeDate
   }
-  let isvalid = validateProject(project);
-  if (isvalid) {
+  let isValid = validateProject(project);
+  if (isValid.valid) {
     addProject(project);
     console.log(project);
     console.log(projects);
     clearInputs(ProjectName,TechnologyUsed,"#starting-date","#completion-date");
     alert(MESSAGES.SUCCESS);
-    
+   
+  }
+  else
+  {
+    alert(isValid.error);
   }
   
 })

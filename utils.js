@@ -12,9 +12,10 @@ const validateProject = function (project) {
     error.push(ERROR_MESSAGES.STARTING_DATE_NULL);
   } else if (!project.completionDate) {
     error.push(ERROR_MESSAGES.COMPLETION_DATE_NULL);
-  } else {
-    return true;
+  } else{
+    return {valid:true,error};
   }
+  return {valid:false,error};
  
 };
 
