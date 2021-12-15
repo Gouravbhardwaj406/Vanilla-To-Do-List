@@ -18,11 +18,11 @@ const validateProject = function (project) {
  
 };
 
-const clearInputs = function (inputname1, inputname2, inputname3, inputname4) {
-  document.querySelector(inputname1).value = "";
-  document.querySelector(inputname2).value = ""
-  document.querySelector(inputname3).value = ""
-  document.querySelector(inputname4).value = ""
+const clearInputs = function () {
+  document.querySelector("#projectname").value = "";
+  document.querySelector("#technology").value = "";
+  document.querySelector("#starting-date").value = "";
+  document.querySelector("#completion-date").value= "";
 };
 
 const addProject = function (project) {
@@ -66,17 +66,17 @@ const projectDiv = function (project, parentDiv) {
   let divtag = document.createElement("div");
   divtag.className = "heading1";
   parentDiv.appendChild(divtag);
-  createTag("div", project.name, "box1", divtag);
-  createTag("div", project.technologyUsed, "box2", divtag);
-  createTag("div", project.startingDate, "box3", divtag);
-  createTag("div", project.completionDate, "box4", divtag);
+  createTag("div", project.name, "box11", divtag);
+  createTag("div", project.technologyUsed, "box21", divtag);
+  createTag("div", project.startingDate, "box31", divtag);
+  createTag("div", project.completionDate, "box41", divtag);
   let exitdiv = document.createElement("div");
-  exitdiv.class = "box5";
+  exitdiv.class = "box51";
   divtag.appendChild(exitdiv);
   if (project.status === "pending") {
     completeButton("BUTTON", "complete", "completed", exitdiv, project, parentDiv, divtag);
   }
-  exitButton("BUTTON", "exitt", "Remove Project", exitdiv, project, parentDiv, divtag);
+  exitButton("BUTTON", "exitt", "Remove", exitdiv, project, parentDiv, divtag);
   clearInputs("#projectname", "#technology", "#starting-date", "#completion-date");
 }
 
@@ -87,7 +87,7 @@ const displayProjects = function (filter) {
   }else {
     arr = filterOptions(filter);
   }
-  let mainDiv = document.querySelector(".main2sub");
+  let mainDiv = document.querySelector(".container");
   mainDiv.innerHTML = "";
   for (let project of arr) {
     projectDiv(project, mainDiv);

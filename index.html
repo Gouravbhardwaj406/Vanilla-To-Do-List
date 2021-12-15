@@ -11,73 +11,73 @@
   <body>
 
     <div class="main">
-      <div class="main1">
+      <div class="sidebar1">
         <div class="home">
-          <div class="home1">01</div>
+          <div class="home1 circle">01</div>
           <div class="home2">Home</div>
         </div>
-        <div class="myprojects">My Projects</div>
+        <div class="addproject">
+          <div class="addproject1 circle">02</div>
+          <div class="addproject2">Add Project</div>
+        </div>
+        <div class="myprojects">
+          <div class="myprojects1 circle">03</div>
+          <div class="myprojects2">My Projects</div>
+        </div>
       </div>
-      <div class="main2">
-        <h1>To Do List</h1>
-        <div class="main2sub">
-        <div class="input-heading">
-          <div id="input-heading-projectname">Project Name</div>
-          <div id="input-heading-technologyUsed">Technology used</div>
+      <div class="sidebar2">
+        <div class="homediv">
+          <h1>Welcome to Home Page</h1>
+          <h4>Here you can create a detailed list projects to perform.also you can perform certain operation on particular project such as project completion, project removal. </h4>
+          <ul type="disk">
+            <li>click on add project to add your project to your list</li>
+            <li>click on myprojects to view your project list</li>
+          </ul>
+          
         </div>
-        <div>
-          <input id="projectname" placeholder="Project Name" type="text" />
-          <input id="technology" placeholder="Technology used" type="text" />
+        <div class="addprojectdiv">
+          <h1>To Do List</h1>
+          <div class="input-heading">
+            <div id="input-projectname">Project Name</div>
+            <div id="input-technologyUsed">Technology used</div>
+          </div>
+          <div>
+            <input id="projectname" placeholder="Project Name" type="text" />
+            <input id="technology" placeholder="Technology used" type="text" />
+          </div>
+          <div class="input-heading">
+            <div id="input-starting-date">Starting Date</div>
+            <div id="input-completion-date">completion Date</div>
+          </div>
+          <div>
+            <input id="starting-date" type="date" />
+            <input id="completion-date" type="date" />
+          </div>
+          <div class="addbutton">
+            <button id="addToDo" class="ToDo">add project</button>
+          </div>
         </div>
-        <div class="input-heading">
-          <div id="input-heading-starting-date">Starting Date</div>
-          <div id="input-heading-completion-date">completion Date</div>
-        </div>
-        <div>
-          <input id="starting-date" type="date" />
-          <input id="completion-date" type="date" />
-        </div>
-        <div class="addbutton">
-          <button id="addToDo" class="ToDo">add project</button>
-        </div>
+        <div class="project-list">
+          <div class="list-heading">Project List</div>
+          <div class="filter-options">
+            <div class="filter-todo">Filter</div>
+            <select class="filter-todo1">
+              <option value="all" selected>All</option>
+              <option value="completed">Completed</option>
+              <option value="pending">pending</option>
+            </select>
+          </div>
+          <div class="heading">
+            <div class="projectname box1">Project Name</div>
+            <div class="projectname box2">Technology used</div>
+            <div class="projectname box3">Starting Date</div>
+            <div class="projectname box4">End Date</div>
+            <div class="projectname box5">Action</div>
+          </div>
+          <div class="container" id="container"></div>
         </div>
       </div>
     </div>
-    <header class="project-heading">
-      <h1>To do list</h1>
-      <div class="input-heading">
-        <div id="input-heading-projectname">Project Name</div>
-        <div id="input-heading-technologyUsed">Technology used</div>
-        <div id="input-heading-starting-date">Starting Date</div>
-        <div id="input-heading-completion-date">completion Date</div>
-      </div>
-      <div>
-        <input id="projectname" placeholder="Project Name" type="text" />
-        <input id="technology" placeholder="Technology used" type="text" />
-        <input id="starting-date" type="date" />
-        <input id="completion-date" type="date" />
-        <button id="addToDo" class="addToDoButton">add project</button>
-      </div>
-    </header>
-    <div class="project-details">My Projects</div>
-    <div class="filter-options">
-      <div class="filter-todo">Filter</div>
-      <select class="filter-todo1">
-        <option value="all" selected>All</option>
-        <option value="completed">Completed</option>
-        <option value="pending">pending</option>
-      </select>
-    </div>
-
-    <div class="main">
-      <div class="heading">
-        <div class="projectname box1">Project Name</div>
-        <div class="projectname box2">Technology used</div>
-        <div class="projectname box3">Starting Date</div>
-        <div class="projectname box4">End Date</div>
-        <div class="projectname box5">Action</div>
-      </div>
-      <div class="container" id="container"></div>
-    </div>
+   
   </body>
 </html>
