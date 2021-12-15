@@ -1,4 +1,4 @@
-import { projects, validateProject, addProject, clearInputs, filterOptions, displayProjects, filterProjects, completeButton, exitButton, createTag } from "./utils.js";
+import { projects, validateProject, addProject, clearInputs, filterOptions, displayProjects, filterProjects, completeButton, exitButton, createTag, displaydiv } from "./utils.js";
 import { ERROR_MESSAGES, FILTERVALUES, MESSAGES } from "./constants.js"
 
 
@@ -18,32 +18,20 @@ document
 
 let homeButton = document.querySelector(".home");
 homeButton.addEventListener("click", function () {
-  homeButton.style.background = "green";
-  document.querySelector(".addprojectdiv").style.height = "0px";
-  document.querySelector(".addproject").style.background = "#2B1451";
-  document.querySelector(".project-list").style.height = "0px";
-  document.querySelector(".myprojects").style.background = "#2B1451";
+  displaydiv(".homelogo", ".addprojectdisplay", ".addprojectlogo", ".project-list", ".myprojectslogo", "0px", "0px")
 
 })
 
 let addProjectdiv = document.querySelector(".addproject");
 addProjectdiv.addEventListener("click", function () {
-  addProjectdiv.style.background = "green";
-  document.querySelector(".addprojectdiv").style.height = "500px";
-  document.querySelector(".home").style.background = "#2B1451";
-  document.querySelector(".project-list").style.height = "0px";
-  document.querySelector(".myprojects").style.background = "#2B1451";
+  displaydiv(".addprojectlogo", ".addprojectdisplay", ".homelogo", ".project-list", ".myprojectslogo", "500px", "0px");
 })
 
 let projectlist = document.querySelector(".myprojects");
 projectlist.addEventListener("click", function () {
-  projectlist.style.background = "green";
-  document.querySelector(".project-list").style.height = "500px";
-  document.querySelector(".home").style.background = "#2B1451";
-  document.querySelector(".addproject").style.background = "#2B1451";
+  displaydiv(".myprojectslogo", ".project-list", ".homelogo", ".addprojectdisplay", ".addprojectlogo", "500px", "0px");
   let filter = document.querySelector(".filter-todo1");
   let index = filter.selectedIndex;
-  console.log(filter.options[index].value)
   displayProjects(filter.options[index].value);
 })
 

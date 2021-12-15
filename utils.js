@@ -12,18 +12,18 @@ const validateProject = function (project) {
     error.push(ERROR_MESSAGES.STARTING_DATE_NULL);
   } else if (!project.completionDate) {
     error.push(ERROR_MESSAGES.COMPLETION_DATE_NULL);
-  } else{
-    return {valid:true,error};
+  } else {
+    return { valid: true, error };
   }
-  return {valid:false,error};
- 
+  return { valid: false, error };
+
 };
 
 const clearInputs = function () {
   document.querySelector("#projectname").value = "";
   document.querySelector("#technology").value = "";
   document.querySelector("#starting-date").value = "";
-  document.querySelector("#completion-date").value= "";
+  document.querySelector("#completion-date").value = "";
 };
 
 const addProject = function (project) {
@@ -85,7 +85,7 @@ const displayProjects = function (filter) {
   let arr;
   if (filter === FILTERVALUES.ALL) {
     arr = projects;
-  }else {
+  } else {
     arr = filterOptions(filter);
   }
   let mainDiv = document.querySelector(".container");
@@ -106,4 +106,12 @@ const filterProjects = function () {
   });
 };
 
-export { projects, validateProject, addProject, clearInputs, filterOptions, displayProjects, filterProjects, completeButton, exitButton, createTag };
+const displaydiv = function (input1, input2, input3, input4, input5, height1, height2) {
+  document.querySelector(input1).style.background = "green";
+  document.querySelector(input2).style.height = height1
+  document.querySelector(input3).style.background = "white";
+  document.querySelector(input4).style.height = height2
+  document.querySelector(input5).style.background = "white";
+}
+
+export { projects, validateProject, addProject, clearInputs, filterOptions, displayProjects, filterProjects, completeButton, exitButton, createTag, displaydiv };
