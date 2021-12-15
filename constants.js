@@ -12,7 +12,7 @@ let FILTERVALUES = {
     PENDING: "pending"
 }
 let MESSAGES={
-    SUCCESS:"Project Added"
+    SUCCESS:"your Project has been Added to the list"
 }
 
 export { ERROR_MESSAGES, FILTERVALUES,MESSAGES };
